@@ -1,0 +1,30 @@
+
+.namecard{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 80px 10px 20px;
+    /* background-color: whitesmoke; */
+    color: black;
+    text-align: left;
+}
+
+.namecard__info{
+    font-weight: 900;
+}
+
+.name{
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.age{
+    font-weight: 600;
+    font-style: italic;
+}
+
+.male--bgcolor{
+    background-color: lightblue;
+}
+.female--bgcolor{
+    background-color: rgb(230, 78, 78);
+}
