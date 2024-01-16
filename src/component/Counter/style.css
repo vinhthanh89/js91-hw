@@ -1,0 +1,16 @@
+.btn{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn--increase{
+    background-color: lightgreen;
+}
+
+.btn--decrease{
+    background-color: rgb(230, 98, 98);
+}
