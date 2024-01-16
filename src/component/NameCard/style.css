@@ -2,8 +2,7 @@
 .namecard{
     border: 1px solid black;
     border-radius: 20px;
-    padding: 10px 80px 10px 20px;
-    /* background-color: whitesmoke; */
+    padding: 20px 30px;
     color: black;
     text-align: left;
 }
