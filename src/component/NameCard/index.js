@@ -11,9 +11,9 @@ const NameCard = ({name , age , gender}) => {
     
     return (
         <div className={`namecard ${changeBackgroundColor(gender)}`}>
-            <p className="namecard__info name">Name : {name}</p>
-            <p className="namecard__info age">Age : {age}</p>
-            <p className="namecard__info gender">Gender : {gender}</p>
+            <div className="namecard__info name">Name : {name}</div>
+            <div className="namecard__info age">Age : {age}</div>
+            <div className="namecard__info gender">Gender : {gender}</div>
         </div>
     )
 }

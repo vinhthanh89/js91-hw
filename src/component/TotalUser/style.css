@@ -1,0 +1,8 @@
+.totaluser{
+    margin-top: 5px;
+}
+
+.userlist{
+    display: flex;
+    column-gap: 5px;
+}
