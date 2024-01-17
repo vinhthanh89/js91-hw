@@ -1,3 +1,35 @@
-.todolist{
-    margin-bottom: 5px;
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.task__container{
+    width: 100%;
+}
+
+.add-item__container{
+    margin-top: 10px;
+}
+
+.add-button{
+    width: 470px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    color: whitesmoke;
+    opacity: 0.6;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.add-button:hover{
+    opacity: 1;
 }

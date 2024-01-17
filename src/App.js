@@ -1,5 +1,5 @@
 import "./App.css";
-// import { useState } from "react";
+import { useState } from "react";
 
 // import NameCard from "./component/NameCard";
 // import Counter from "./component/Counter";
@@ -8,17 +8,24 @@ import "./App.css";
 // import TotalUser from "./component/TotalUser";
 // import TodoItem from "./component/TodoItem";
 import TodoList from "./component/TodoList";
+import Header from "./component/Header";
+import ThemeContext from "./Context/ThemeContext";
 
 function App() {
   // const [usersData, setUsersData] = useState([]);
   // const handleAddUsersData = (newUser) => {
   //   setUsersData([...usersData, newUser]);
   // };
+  const [theme, setTheme] = useState("light");
 
   return (
     <div className="App">
-      <header className="App-header">
-        <TodoList />
+      <header className={`App-header ${theme === "light" ? "light" : "dark"}`}>
+        <ThemeContext.Provider value={{ theme: theme, setTheme: setTheme }}>
+          <Header />
+          <TodoList />
+        </ThemeContext.Provider>
+
         {/* <UserForm handleAddUsersData={handleAddUsersData} />
         <TotalUser usersData={usersData}/> */}
         {/* <Counter />
