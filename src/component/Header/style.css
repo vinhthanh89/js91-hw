@@ -1,0 +1,104 @@
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    width: 490px;
+}
+
+.logo{
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 600;
+}
+.theme-button button{
+  cursor: pointer;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+
+.row-box{
+  width: 100%;
+  height: 1px;
+  margin-bottom: 10px;
+}
+
+.light-button{
+  color: rgb(255, 255, 255);
+}
+
+.dark-button{
+  color: rgb(35 39 47);
+}
+
+.row-box.light{
+  background-color: rgb(35 39 47);
+}
+
+.row-box.dark{
+  background-color: rgb(255, 255, 255);   
+}
+
+
+.nav ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav li a{
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.active{
+  border-radius: 50px;
+}
+
+.light.active{
+  background-color: whitesmoke;
+}
+
+.dark.active{
+  background-color: rgb(186, 73, 73);
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.nav .dropdown-content{
+  display: none;
+  position: absolute;
+  top :35px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.dropdown-content.light{
+  background-color: whitesmoke;
+}
+
+.dropdown-content.dark{
+  background-color: rgb(186, 73, 73);
+}
+
+.dropdown-item.light{
+  background-color: inherit;
+}
+
+.dropdown-item.dark{
+  background-color: inherit;
+}
