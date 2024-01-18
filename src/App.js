@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
 // import NameCard from "./component/NameCard";
 // import Counter from "./component/Counter";
@@ -7,9 +8,12 @@ import { useState } from "react";
 // import UserForm from "./component/UserForm";
 // import TotalUser from "./component/TotalUser";
 // import TodoItem from "./component/TodoItem";
-import TodoList from "./component/TodoList";
-import Header from "./component/Header";
+// import TodoList from "./component/TodoList";
 import ThemeContext from "./Context/ThemeContext";
+import Header from "./component/Header";
+import Todo from "./Pages/Todo";
+import Welcome from "./Pages/Welcome";
+import MyProfile from "./Pages/MyProfile";
 
 function App() {
   // const [usersData, setUsersData] = useState([]);
@@ -23,7 +27,11 @@ function App() {
       <header className={`App-header ${theme === "light" ? "light" : "dark"}`}>
         <ThemeContext.Provider value={{ theme: theme, setTheme: setTheme }}>
           <Header />
-          <TodoList />
+          <Routes>
+            <Route path="/" element={<Todo />} />
+            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/my-profile" element={<MyProfile />} />
+          </Routes>
         </ThemeContext.Provider>
 
         {/* <UserForm handleAddUsersData={handleAddUsersData} />

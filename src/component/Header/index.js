@@ -1,6 +1,6 @@
 import { CheckCircleFill, Sun, MoonFill } from "react-bootstrap-icons";
 import { useContext } from "react";
-// import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import "./style.css";
 import ThemeContext from "../../Context/ThemeContext";
@@ -36,6 +36,36 @@ const Header = () => {
               </button>
             )}
           </div>
+        </div>
+      </div>
+      <div className="nav">
+        <div className="nav__bar">
+          <ul>
+            <li>
+              <NavLink
+                to="/"
+                className={`${theme === "light" ? "light" : "dark"}`}
+              >
+                Todo
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/welcome"
+                className={`${theme === "light" ? "light" : "dark"}`}
+              >
+                Welcome
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/my-profile"
+                className={`${theme === "light" ? "light" : "dark"}`}
+              >
+                Profile
+              </NavLink>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
