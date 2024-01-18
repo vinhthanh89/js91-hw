@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./style.css";
 import TODOS from "../../Data/todo";
@@ -7,6 +8,7 @@ import AddTodo from "../AddTodo";
 
 const TodoList = () => {
   const [todos, setTodos] = useState(TODOS);
+  const navigate = useNavigate();
 
   const handleEditTask = (taskId, param) => {
     setTodos((prevTodos) =>
@@ -51,6 +53,7 @@ const TodoList = () => {
       <div className="task__container" key={todo.id}>
         <TodoItem
           todo={todo}
+          navigate={navigate}
           handleIsComplete={handleIsComplete}
           handleIsEdited={handleIsEdited}
           handleDelete={handleDelete}

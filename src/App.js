@@ -14,6 +14,8 @@ import Header from "./component/Header";
 import Todo from "./Pages/Todo";
 import Welcome from "./Pages/Welcome";
 import MyProfile from "./Pages/MyProfile";
+import PageNotFound from "./Pages/PageNotFound";
+import TodoDetail from "./Pages/TodoDetail";
 
 function App() {
   // const [usersData, setUsersData] = useState([]);
@@ -28,7 +30,9 @@ function App() {
         <ThemeContext.Provider value={{ theme: theme, setTheme: setTheme }}>
           <Header />
           <Routes>
+            <Route path="*" element={<PageNotFound />} />
             <Route path="/" element={<Todo />} />
+            <Route path="/:todoId" element={<TodoDetail />} />
             <Route path="/welcome" element={<Welcome />} />
             <Route path="/my-profile" element={<MyProfile />} />
           </Routes>
