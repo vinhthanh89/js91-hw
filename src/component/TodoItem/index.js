@@ -5,6 +5,7 @@ import "./style.css";
 
 const TodoItem = ({
   todo,
+  navigate,
   handleIsComplete,
   handleIsEdited,
   handleDelete,
@@ -72,7 +73,7 @@ const TodoItem = ({
                 }}
               />
             </div>
-            <div className={`todo-task ${isCompleted ? "finish" : ""}`}>
+            <div onClick={() => navigate(id)} className={`todo-task ${isCompleted ? "finish" : ""}`}>
               <span>{task}</span>
             </div>
           </div>

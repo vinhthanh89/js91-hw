@@ -68,6 +68,7 @@ const Header = () => {
           </ul>
         </div>
       </div>
+      <div className={`row-box ${theme === "light" ? "light" : "dark"}`}></div>
     </div>
   );
 };
